@@ -60,7 +60,7 @@ JOIN item_basic AS i2 ON sr.resulthq2 = i2.itemid
 JOIN item_basic AS i3 ON sr.resulthq3 = i3.itemid
 
 WHERE 
-	-- Limit results to synths where HQ affects quantity
+	-- Limit results to NPC-sellable synths where HQ affects quantity
 	i0.NoSale = 0
 	AND sr.ResultHQ1Qty > sr.ResultQty
 	-- Limit results to synths we're potentially already tier 3 on, with fewer than 4 ingredients
@@ -11649,7 +11649,7 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
     </table>
 
     <p>
-      <em>generated 2019-04-12 17:12:49      by <a href="http://www.heidisql.com/">HeidiSQL 9.4.0.5125</a></em>
+      <em>generated 2019-04-12 17:15:16      by <a href="http://www.heidisql.com/">HeidiSQL 9.4.0.5125</a></em>
     </p>
 
   </body>
