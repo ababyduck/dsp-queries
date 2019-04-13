@@ -24,8 +24,9 @@ JOIN item_basic AS i2 ON sr.resulthq2 = i2.itemid
 JOIN item_basic AS i3 ON sr.resulthq3 = i3.itemid
 
 WHERE 
-	-- Limit results to synths where HQ affects quantity
-	sr.ResultHQ1Qty > sr.ResultQty
+	-- Limit results to NPC-sellable synths where HQ affects quantity
+	i0.NoSale = 0
+	AND sr.ResultHQ1Qty > sr.ResultQty
 	-- Limit results to synths we're potentially already tier 3 on, with fewer than 4 ingredients
 	-- (Modify this to match your own skill levels or remove/comment out to audit all recipes)
 	/*

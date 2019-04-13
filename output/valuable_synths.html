@@ -61,7 +61,8 @@ JOIN item_basic AS i3 ON sr.resulthq3 = i3.itemid
 
 WHERE 
 	-- Limit results to synths where HQ affects quantity
-	sr.ResultHQ1Qty > sr.ResultQty
+	i0.NoSale = 0
+	AND sr.ResultHQ1Qty > sr.ResultQty
 	-- Limit results to synths we're potentially already tier 3 on, with fewer than 4 ingredients
 	-- (Modify this to match your own skill levels or remove/comment out to audit all recipes)
 	/*
@@ -75,7 +76,7 @@ WHERE
 
 ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
 
-    <table caption="UnknownTable (797 rows)">
+    <table caption="UnknownTable (770 rows)">
       <thead>
         <tr>
           <th class="col0">synth_id</th>
@@ -10970,126 +10971,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col12">x1</td>
         </tr>
         <tr>
-          <td class="col0">1050</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_fire_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_fire_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_fire_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_fire_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
-          <td class="col0">1051</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_ice_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_ice_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_ice_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_ice_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
-          <td class="col0">1052</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_wind_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_wind_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_wind_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_wind_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
-          <td class="col0">1053</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_earth_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_earth_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_earth_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_earth_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
-          <td class="col0">1054</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_lightning_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_lightning_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_lightning_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_lightning_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
-          <td class="col0">1055</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_water_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_water_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_water_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_water_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
-          <td class="col0">1056</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_light_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_light_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_light_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_light_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
-          <td class="col0">1057</td>
-          <td class="col1">0</td>
-          <td class="col2">bottle_of_dark_anima</td>
-          <td class="col3">x10</td>
-          <td class="col4">0</td>
-          <td class="col5">bottle_of_dark_anima</td>
-          <td class="col6">x20</td>
-          <td class="col7">0</td>
-          <td class="col8">bottle_of_dark_anima</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bottle_of_dark_anima</td>
-          <td class="col12">x40</td>
-        </tr>
-        <tr>
           <td class="col0">3552</td>
           <td class="col1">0</td>
           <td class="col2">jug_of_saline_broth</td>
@@ -11118,21 +10999,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col10">0</td>
           <td class="col11">handful_of_abrasion_bolt_heads</td>
           <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">3577</td>
-          <td class="col1">0</td>
-          <td class="col2">palladian_brass_chain</td>
-          <td class="col3">x1</td>
-          <td class="col4">0</td>
-          <td class="col5">palladian_brass_chain</td>
-          <td class="col6">x2</td>
-          <td class="col7">0</td>
-          <td class="col8">palladian_brass_chain</td>
-          <td class="col9">x3</td>
-          <td class="col10">0</td>
-          <td class="col11">palladian_brass_chain</td>
-          <td class="col12">x4</td>
         </tr>
         <tr>
           <td class="col0">3672</td>
@@ -11165,36 +11031,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col12">x99</td>
         </tr>
         <tr>
-          <td class="col0">3702</td>
-          <td class="col1">0</td>
-          <td class="col2">piece_of_urunday_lumber</td>
-          <td class="col3">x1</td>
-          <td class="col4">0</td>
-          <td class="col5">piece_of_urunday_lumber</td>
-          <td class="col6">x2</td>
-          <td class="col7">0</td>
-          <td class="col8">piece_of_urunday_lumber</td>
-          <td class="col9">x3</td>
-          <td class="col10">0</td>
-          <td class="col11">piece_of_urunday_lumber</td>
-          <td class="col12">x4</td>
-        </tr>
-        <tr>
-          <td class="col0">3703</td>
-          <td class="col1">0</td>
-          <td class="col2">piece_of_urunday_lumber</td>
-          <td class="col3">x3</td>
-          <td class="col4">0</td>
-          <td class="col5">piece_of_urunday_lumber</td>
-          <td class="col6">x6</td>
-          <td class="col7">0</td>
-          <td class="col8">piece_of_urunday_lumber</td>
-          <td class="col9">x9</td>
-          <td class="col10">0</td>
-          <td class="col11">piece_of_urunday_lumber</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
           <td class="col0">3711</td>
           <td class="col1">0</td>
           <td class="col2">piece_of_exalted_lumber</td>
@@ -11225,36 +11061,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col12">x12</td>
         </tr>
         <tr>
-          <td class="col0">3748</td>
-          <td class="col1">0</td>
-          <td class="col2">piece_of_kapor_lumber</td>
-          <td class="col3">x1</td>
-          <td class="col4">0</td>
-          <td class="col5">piece_of_kapor_lumber</td>
-          <td class="col6">x2</td>
-          <td class="col7">0</td>
-          <td class="col8">piece_of_kapor_lumber</td>
-          <td class="col9">x3</td>
-          <td class="col10">0</td>
-          <td class="col11">piece_of_kapor_lumber</td>
-          <td class="col12">x4</td>
-        </tr>
-        <tr>
-          <td class="col0">3749</td>
-          <td class="col1">0</td>
-          <td class="col2">piece_of_kapor_lumber</td>
-          <td class="col3">x3</td>
-          <td class="col4">0</td>
-          <td class="col5">piece_of_kapor_lumber</td>
-          <td class="col6">x6</td>
-          <td class="col7">0</td>
-          <td class="col8">piece_of_kapor_lumber</td>
-          <td class="col9">x9</td>
-          <td class="col10">0</td>
-          <td class="col11">piece_of_kapor_lumber</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
           <td class="col0">3775</td>
           <td class="col1">0</td>
           <td class="col2">handful_of_righteous_bolt_heads</td>
@@ -11268,21 +11074,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col10">0</td>
           <td class="col11">handful_of_righteous_bolt_heads</td>
           <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">3808</td>
-          <td class="col1">0</td>
-          <td class="col2">twitherym_scale</td>
-          <td class="col3">x1</td>
-          <td class="col4">0</td>
-          <td class="col5">twitherym_scale</td>
-          <td class="col6">x2</td>
-          <td class="col7">0</td>
-          <td class="col8">twitherym_scale</td>
-          <td class="col9">x3</td>
-          <td class="col10">0</td>
-          <td class="col11">twitherym_scale</td>
-          <td class="col12">x4</td>
         </tr>
         <tr>
           <td class="col0">3816</td>
@@ -11300,81 +11091,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col12">x99</td>
         </tr>
         <tr>
-          <td class="col0">3856</td>
-          <td class="col1">0</td>
-          <td class="col2">barnacle</td>
-          <td class="col3">x1</td>
-          <td class="col4">0</td>
-          <td class="col5">barnacle</td>
-          <td class="col6">x2</td>
-          <td class="col7">0</td>
-          <td class="col8">barnacle</td>
-          <td class="col9">x3</td>
-          <td class="col10">0</td>
-          <td class="col11">barnacle</td>
-          <td class="col12">x4</td>
-        </tr>
-        <tr>
-          <td class="col0">3864</td>
-          <td class="col1">0</td>
-          <td class="col2">handful_of_chapuli_arrowheads</td>
-          <td class="col3">x6</td>
-          <td class="col4">0</td>
-          <td class="col5">handful_of_chapuli_arrowheads</td>
-          <td class="col6">x8</td>
-          <td class="col7">0</td>
-          <td class="col8">handful_of_chapuli_arrowheads</td>
-          <td class="col9">x10</td>
-          <td class="col10">0</td>
-          <td class="col11">handful_of_chapuli_arrowheads</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">3865</td>
-          <td class="col1">0</td>
-          <td class="col2">handful_of_chapuli_arrowheads</td>
-          <td class="col3">x18</td>
-          <td class="col4">0</td>
-          <td class="col5">handful_of_chapuli_arrowheads</td>
-          <td class="col6">x24</td>
-          <td class="col7">0</td>
-          <td class="col8">handful_of_chapuli_arrowheads</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">handful_of_chapuli_arrowheads</td>
-          <td class="col12">x36</td>
-        </tr>
-        <tr>
-          <td class="col0">3871</td>
-          <td class="col1">0</td>
-          <td class="col2">handful_of_mantid_arrowheads</td>
-          <td class="col3">x6</td>
-          <td class="col4">0</td>
-          <td class="col5">handful_of_mantid_arrowheads</td>
-          <td class="col6">x8</td>
-          <td class="col7">0</td>
-          <td class="col8">handful_of_mantid_arrowheads</td>
-          <td class="col9">x10</td>
-          <td class="col10">0</td>
-          <td class="col11">handful_of_mantid_arrowheads</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">3872</td>
-          <td class="col1">0</td>
-          <td class="col2">handful_of_mantid_arrowheads</td>
-          <td class="col3">x18</td>
-          <td class="col4">0</td>
-          <td class="col5">handful_of_mantid_arrowheads</td>
-          <td class="col6">x24</td>
-          <td class="col7">0</td>
-          <td class="col8">handful_of_mantid_arrowheads</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">handful_of_mantid_arrowheads</td>
-          <td class="col12">x36</td>
-        </tr>
-        <tr>
           <td class="col0">3897</td>
           <td class="col1">0</td>
           <td class="col2">maliyakaleya_orb</td>
@@ -11390,21 +11106,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col12">x12</td>
         </tr>
         <tr>
-          <td class="col0">3935</td>
-          <td class="col1">0</td>
-          <td class="col2">oxidant_bolt</td>
-          <td class="col3">x33</td>
-          <td class="col4">0</td>
-          <td class="col5">oxidant_bolt</td>
-          <td class="col6">x66</td>
-          <td class="col7">0</td>
-          <td class="col8">oxidant_bolt</td>
-          <td class="col9">x99</td>
-          <td class="col10">0</td>
-          <td class="col11">oxidant_bolt</td>
-          <td class="col12">x99</td>
-        </tr>
-        <tr>
           <td class="col0">3951</td>
           <td class="col1">0</td>
           <td class="col2">cehuetzi_snow_cone</td>
@@ -11418,36 +11119,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col10">0</td>
           <td class="col11">cyclical_coalescence</td>
           <td class="col12">x6</td>
-        </tr>
-        <tr>
-          <td class="col0">4005</td>
-          <td class="col1">0</td>
-          <td class="col2">bag_of_chapuli_fletchings</td>
-          <td class="col3">x6</td>
-          <td class="col4">0</td>
-          <td class="col5">bag_of_chapuli_fletchings</td>
-          <td class="col6">x8</td>
-          <td class="col7">0</td>
-          <td class="col8">bag_of_chapuli_fletchings</td>
-          <td class="col9">x10</td>
-          <td class="col10">0</td>
-          <td class="col11">bag_of_chapuli_fletchings</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">4006</td>
-          <td class="col1">0</td>
-          <td class="col2">bag_of_chapuli_fletchings</td>
-          <td class="col3">x18</td>
-          <td class="col4">0</td>
-          <td class="col5">bag_of_chapuli_fletchings</td>
-          <td class="col6">x24</td>
-          <td class="col7">0</td>
-          <td class="col8">bag_of_chapuli_fletchings</td>
-          <td class="col9">x30</td>
-          <td class="col10">0</td>
-          <td class="col11">bag_of_chapuli_fletchings</td>
-          <td class="col12">x36</td>
         </tr>
         <tr>
           <td class="col0">4027</td>
@@ -11493,21 +11164,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col10">0</td>
           <td class="col11">jug_of_wispy_broth</td>
           <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">4075</td>
-          <td class="col1">0</td>
-          <td class="col2">pinch_of_saffron</td>
-          <td class="col3">x1</td>
-          <td class="col4">0</td>
-          <td class="col5">pinch_of_saffron</td>
-          <td class="col6">x2</td>
-          <td class="col7">0</td>
-          <td class="col8">pinch_of_saffron</td>
-          <td class="col9">x3</td>
-          <td class="col10">0</td>
-          <td class="col11">pinch_of_saffron</td>
-          <td class="col12">x4</td>
         </tr>
         <tr>
           <td class="col0">4078</td>
@@ -11643,36 +11299,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col10">0</td>
           <td class="col11">b.e.w._pitaru</td>
           <td class="col12">x8</td>
-        </tr>
-        <tr>
-          <td class="col0">4116</td>
-          <td class="col1">0</td>
-          <td class="col2">senroh_skewer</td>
-          <td class="col3">x6</td>
-          <td class="col4">0</td>
-          <td class="col5">senroh_skewer</td>
-          <td class="col6">x12</td>
-          <td class="col7">0</td>
-          <td class="col8">piscators_skewer</td>
-          <td class="col9">x6</td>
-          <td class="col10">0</td>
-          <td class="col11">piscators_skewer</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">4117</td>
-          <td class="col1">0</td>
-          <td class="col2">senroh_skewer</td>
-          <td class="col3">x6</td>
-          <td class="col4">0</td>
-          <td class="col5">senroh_skewer</td>
-          <td class="col6">x12</td>
-          <td class="col7">0</td>
-          <td class="col8">piscators_skewer</td>
-          <td class="col9">x6</td>
-          <td class="col10">0</td>
-          <td class="col11">piscators_skewer</td>
-          <td class="col12">x12</td>
         </tr>
         <tr>
           <td class="col0">4123</td>
@@ -11900,21 +11526,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col12">x12</td>
         </tr>
         <tr>
-          <td class="col0">4382</td>
-          <td class="col1">0</td>
-          <td class="col2">handful_of_midrium_bolt_heads</td>
-          <td class="col3">x6</td>
-          <td class="col4">0</td>
-          <td class="col5">handful_of_midrium_bolt_heads</td>
-          <td class="col6">x8</td>
-          <td class="col7">0</td>
-          <td class="col8">handful_of_midrium_bolt_heads</td>
-          <td class="col9">x10</td>
-          <td class="col10">0</td>
-          <td class="col11">handful_of_midrium_bolt_heads</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
           <td class="col0">4387</td>
           <td class="col1">0</td>
           <td class="col2">handful_of_rakaznar_arrowheads</td>
@@ -11927,21 +11538,6 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
           <td class="col9">x10</td>
           <td class="col10">0</td>
           <td class="col11">handful_of_rakaznar_arrowheads</td>
-          <td class="col12">x12</td>
-        </tr>
-        <tr>
-          <td class="col0">4404</td>
-          <td class="col1">0</td>
-          <td class="col2">handful_of_damascus_bolt_heads</td>
-          <td class="col3">x6</td>
-          <td class="col4">0</td>
-          <td class="col5">handful_of_damascus_bolt_heads</td>
-          <td class="col6">x8</td>
-          <td class="col7">0</td>
-          <td class="col8">handful_of_damascus_bolt_heads</td>
-          <td class="col9">x10</td>
-          <td class="col10">0</td>
-          <td class="col11">handful_of_damascus_bolt_heads</td>
           <td class="col12">x12</td>
         </tr>
         <tr>
@@ -12053,7 +11649,7 @@ ORDER BY i0.BaseSell * sr.ResultQty DESC</p>
     </table>
 
     <p>
-      <em>generated 2019-04-12 16:24:51      by <a href="http://www.heidisql.com/">HeidiSQL 9.4.0.5125</a></em>
+      <em>generated 2019-04-12 17:12:49      by <a href="http://www.heidisql.com/">HeidiSQL 9.4.0.5125</a></em>
     </p>
 
   </body>
